@@ -1,0 +1,16 @@
+[
+{
+"id": "1",
+"description": "hit the gym",
+"status": "todo",
+"createdAt": "2024-08-31",
+"updatedAt": "2024-08-31"
+},
+{
+"id": "2",
+"description": "hit the library",
+"status": "in-progress",
+"createdAt": "2024-08-31",
+"updatedAt": "2024-08-31"
+}
+]
