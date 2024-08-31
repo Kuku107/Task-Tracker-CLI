@@ -11,7 +11,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        int exitCode = new CommandLine(new TaskCommand()).execute("--help");
+        int exitCode = new CommandLine(new TaskCommand()).execute("update", "2", "hehe1");
         System.exit(exitCode);
     }
 }

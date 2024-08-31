@@ -13,7 +13,11 @@ import java.util.concurrent.Callable;
         mixinStandardHelpOptions = true,
         footerHeading = "%n@Copyright%n",
         footer = "Developer by Le Van Duc.",
-        subcommands = {}
+        subcommands = {
+                AddCommand.class,
+                DeleteCommand.class,
+                UpdateCommand.class
+        }
 )
 public class TaskCommand implements Callable<Integer> {
     @Override
