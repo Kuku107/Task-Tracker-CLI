@@ -39,7 +39,7 @@ public class AddCommand implements Callable<Integer> {
         if (tasks.isEmpty())
             task.setId(1);
         else
-            task.setId(tasks.get(tasks.size() - 1).getId());
+            task.setId(tasks.get(tasks.size() - 1).getId() + 1);
         task.setDescription(detail);
         task.setStatus("todo");
         task.setCreatedAt(Date.valueOf(LocalDate.now().toString()));
