@@ -36,6 +36,8 @@ public class AddCommand implements Callable<Integer> {
 
         List<Task> tasks = ReadJsonData.read();
         Task task = new Task();
+
+//      Set property for new task
         if (tasks.isEmpty())
             task.setId(1);
         else
@@ -44,6 +46,7 @@ public class AddCommand implements Callable<Integer> {
         task.setStatus("todo");
         task.setCreatedAt(Date.valueOf(LocalDate.now().toString()));
         task.setUpdatedAt(Date.valueOf(LocalDate.now().toString()));
+
         tasks.add(task);
         WriteJsonData.write(tasks);
         System.out.println("Task added successfully (ID: " + task.getId() + ")");
