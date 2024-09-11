@@ -13,7 +13,7 @@ import java.nio.file.Path;
 public class ReadJsonData {
     public static List<Task> read() {
         Path filePath =
-                Path.of("D:\\Coding\\Back-end project\\Task Tracker CLI\\src\\main\\java\\com\\learning\\cli\\data.json");
+                Path.of("src/main/java/com/learning/cli/data.json");
 
         String jsonList = null;
         try {

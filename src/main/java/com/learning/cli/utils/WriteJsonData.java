@@ -11,7 +11,7 @@ import java.util.List;
 
 public class WriteJsonData {
     public static void write(List<Task> tasks) {
-        String fileName = "D:\\Coding\\Back-end project\\Task Tracker CLI\\src\\main\\java\\com\\learning\\cli\\data.json";
+        String fileName = "src/main/java/com/learning/cli/data.json";
         Gson gson = new Gson();
         try {
             FileWriter fw = new FileWriter(fileName);
@@ -29,7 +29,7 @@ public class WriteJsonData {
     }
 
     public static void main(String[] args) {
-        String fileName = "D:\\Coding\\Back-end project\\Task Tracker CLI\\src\\main\\java\\com\\learning\\cli\\data.json";
+        String fileName = "src/main/java/com/learning/cli/data.json";
         Task task1 = new Task(1, "hit the gym",
                 "todo", Date.valueOf("2024-08-31"), Date.valueOf("2024-08-31"));
         Task task2 = new Task(2, "hit the library",
