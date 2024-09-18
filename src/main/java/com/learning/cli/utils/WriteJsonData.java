@@ -5,16 +5,21 @@ import com.learning.cli.model.Task;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
 public class WriteJsonData {
     public static void write(List<Task> tasks) {
-        String fileName = "src/main/java/com/learning/cli/data.json";
+        String jarDir = Paths.get(System.getProperty("java.class.path"))
+                .toAbsolutePath().getParent().getParent().toString();
+
+        Path filePath = Path.of(jarDir, "data.json");
         Gson gson = new Gson();
         try {
-            FileWriter fw = new FileWriter(fileName);
+            FileWriter fw = new FileWriter(filePath.toFile());
             fw.write("[\n");
             for(int i = 0; i < tasks.size() - 1; i++) {
                 fw.write(gson.toJson(tasks.get(i)));

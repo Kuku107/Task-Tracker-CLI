@@ -1,6 +1,6 @@
 package com.learning.cli;
 
-import com.learning.cli.commands.TaskCommand;
+import com.learning.cli.commands.RootCommand;
 import picocli.CommandLine;
 
 /**
@@ -11,7 +11,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        int exitCode = new CommandLine(new TaskCommand()).execute("ls");
+        int exitCode = new CommandLine(new RootCommand()).execute(args);
         System.exit(exitCode);
     }
 }

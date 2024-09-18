@@ -10,21 +10,15 @@ import java.util.concurrent.Callable;
 
 @CommandLine.Command(
         version = "1.0.0",
-        name = "task-cli",
-        aliases = {"task"},
-        header = "Task-cli command",
-        description = "Welcome to the task tracker application using cli",
+        name = "mark",
+        aliases = {"check"},
+        header = "Mark command",
+        description = "Welcome to the Mark command",
         mixinStandardHelpOptions = true,
         footerHeading = "%n@Copyright%n",
-        footer = "Developer by Le Van Duc.",
-        subcommands = {
-                AddCommand.class,
-                DeleteCommand.class,
-                UpdateCommand.class,
-                ListCommand.class
-        }
+        footer = "Developer by Le Van Duc."
 )
-public class TaskCommand implements Callable<Integer> {
+public class MarkCommand implements Callable<Integer> {
     @CommandLine.Parameters(
             defaultValue = "",
             index = "0"
